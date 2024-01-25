@@ -1,0 +1,24 @@
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+	.clock{
+	  background-color: #ebebeb;
+	  text-align:center;
+	  font-size:55px;
+	  height: 100%;
+	  padding-top: 20px;
+	  padding-bottom: 20px;
+	  font-family: 'Orbitron';
+	  border-radius: 4px;
+	}
