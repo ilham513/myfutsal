@@ -19,14 +19,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
 	<main>
 	  <div class="container py-4">
-		<header class="pb-3 mb-4 border-bottom">
+		<header class="pb-3 text-uppercase mb-4 border-bottom">
 		  <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
 			<span class="fs-4 fw-bold">Booking Futsal</span>
 		  </a>
 		</header>
 
 		<div class="container" style="max-width: 900px;">
-		<h1>Jadwal Sewa Lapangan Futsal <button type="button" class="btn btn-primary">Pesan Lapangan</button></h1>
+		<h1>Jadwal Sewa Lapangan Futsal</h1>
+<div class="alert alert-warning" role="alert">
+  Untuk pemesanan lapangan hubungi 089989XXXX
+</div>
 <table class="table table-striped table-hover" id="sortTable" width="100%" cellspacing="0">
               <thead class="thead-dark">
                 <tr>

@@ -17,72 +17,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link href="<?=base_url();?>css/style.css" rel="stylesheet" >    
 	
 	<style>
-	.center {
-	  margin: auto;
-	  margin-top:100px;
-	  width: 60%;
-	  padding: 10px;
-	  font-size: 18px;
-	}
-	td{
-	  padding: 2px 2px;
-	}
-	.nunito{
-	  font-family: 'Nunito', sans-serif;
-	}
-	
-	body {
-		background-color: #163a76;
-		color: white;
-		font-family: 'Open Sans', sans-serif;
+.btn-color{
+  background-color: #0e1c36;
+  color: #fff;
+  
+}
 
-		background: rgb(22,58,118);
-		background: linear-gradient(94deg, rgba(22,58,118,1) 0%, rgba(34,92,187,1) 100%); 
-	}
-	
-	h4{
-	  font-size: 24px;
-	}
-	
+.profile-image-pic{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+
+
+.cardbody-color{
+  background-color: #ebf2fa;
+}
+
+a{
+  text-decoration: none;
+}
 	</style>
 
   </head>
   <body>
 
-<section class="vh-100 gradient-custom">
-  <div class="container pt-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-light text-dark" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card my-5">
+          <form action="<?=site_url('akun/login_go')?>" method="post" class="card-body cardbody-color p-lg-5">
 
-            <div class="mt-md-4 pb-4">
-
-              <h2 class="fw-bolder mb-4 text-uppercase">Masuk</h2>
-			  		  
-			  <form method="post" action="<?=site_url('akun/login_go')?>">
-				  <div class="form-outline form-white mb-2">
-					<input type="text" name="id" id="typeEmailX" class="form-control" />
-					<label class="form-label" for="typeEmailX">ID</label>
-				  </div>
-
-				  <div class="form-outline form-white mb-4">
-					<input type="password" name="password" id="typePasswordX" class="form-control" />
-					<label class="form-label" for="typePasswordX">Password</label>
-				  </div>
-
-				  <button class="btn btn-primary px-5" type="submit">Login</button>
-			  </form>
-
+            <div class="text-center">
+              <img src="https://visualpharm.com/assets/381/Admin-595b40b65ba036ed117d3b23.svg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                width="200px" alt="profile">
             </div>
 
-          </div>
+            <div class="mb-3">
+              <input name="id" type="text" class="form-control" id="Username" aria-describedby="emailHelp"
+                placeholder="Username">
+            </div>
+            <div class="mb-3">
+              <input name="password" type="password" class="form-control" id="password" placeholder="password">
+            </div>
+            <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+          </form>
         </div>
+
       </div>
     </div>
   </div>
-</section>
-
 	
   </body>
 </html>

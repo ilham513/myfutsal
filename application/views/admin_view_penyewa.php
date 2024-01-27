@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard Admin</title>
+  <title>View Penyewa</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -46,37 +46,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>List Penyewa</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="<?=site_url('admin')?>">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">Lists Penyewa</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-		<!-- Sales Card -->
-					<div class="row">
-					  <div class="col card info-card sales-card m-3">
-						<div class="card-body">
-						  <h5 class="card-title">Jumlah Tim</h5>
 
-						  <div class="d-flex align-items-center">
-							<div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-							  <i class="bi bi-person"></i>
-							</div>
-							<div class="ps-3">
-							  <h6>50</h6>
-							  <span class="text-muted small pt-2 ps-1">Tim yang akan menyewa</span>
-							</div>
-						  </div>
-						</div>
-					  </div>					  
-					  
-					  
-					</div>
-		<!-- End Sales Card -->    
+
+            <!-- Recent Sales -->
+              <div class="card recent-sales overflow-auto">
+
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+					<h5 class="card-title">Data Penyewa</h5>
+					<button class="btn btn-sm text-primary"><a href="<?=site_url('admin/add_penyewa')?>">Tambah Penyewa</a></button>
+				  </div>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama Tim</th>
+                        <th scope="col">Nomor Telpon</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+					<?php foreach($array_penyewa as $penyewa): ?>
+										  <tr>
+											<th scope="row"><?=$penyewa->id_penyewa?></th>
+											<td><?=$penyewa->nama_penyewa?></td>
+											<td><?=$penyewa->no_telp?></td>
+											<td><a href="<?=site_url('admin/edit_penyewa/'.$penyewa->id_penyewa)?>"><i class="bi bi-pencil-square"></i></a> | <a href="<?=site_url('admin/hapus_penyewa/'.$penyewa->id_penyewa)?>"><i class="bi bi-trash3"></i></a> </td>
+										  </tr>
+					<?php endforeach; ?>
+                    </tbody>
+                  </table>
+
+                </div>
+				
+              </div><!-- End Recent Sales -->
+	
 	</section>
 
   </main><!-- End #main -->

@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard Admin</title>
+  <title>Waktu Sewa</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -46,37 +46,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Waktu Sewa</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="<?=site_url('admin')?>">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">Waktu Sewa </li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-		<!-- Sales Card -->
-					<div class="row">
-					  <div class="col card info-card sales-card m-3">
-						<div class="card-body">
-						  <h5 class="card-title">Jumlah Tim</h5>
 
-						  <div class="d-flex align-items-center">
-							<div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-							  <i class="bi bi-person"></i>
-							</div>
-							<div class="ps-3">
-							  <h6>50</h6>
-							  <span class="text-muted small pt-2 ps-1">Tim yang akan menyewa</span>
-							</div>
-						  </div>
-						</div>
-					  </div>					  
-					  
-					  
-					</div>
-		<!-- End Sales Card -->    
+
+            <!-- Recent Sales -->
+              <div class="card recent-sales overflow-auto">
+
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+					<h5 class="card-title">Slot Waktu Sewa Lapangan</h5>
+					<button class="btn btn-sm text-primary"><a href="<?=site_url('admin/add_waktu_sewa')?>">Tambah Slot Waktu</a></button>
+				  </div>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Hari</th>
+                        <th scope="col">Jam</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+<?php foreach($array_waktu_sewa as $waktu_sewa): ?>
+                      <tr>
+                        <th scope="row"><?=$waktu_sewa->id_waktu_sewa?></th>
+                        <td><?=$waktu_sewa->nama_hari?></td>
+                        <td><?=$waktu_sewa->jam?></td>
+                        <td><a href="<?=site_url('admin/edit_waktu_sewa/'.$waktu_sewa->id_waktu_sewa)?>"><i class="bi bi-pencil-square"></i></a> | <a href="<?=site_url('admin/hapus_waktu_sewa/'.$waktu_sewa->id_waktu_sewa)?>"><i class="bi bi-trash3"></i></a> </td>
+                      </tr>
+<?php endforeach; ?>
+                    </tbody>
+                  </table>
+
+                </div>
+				
+              </div><!-- End Recent Sales -->
+	
 	</section>
 
   </main><!-- End #main -->

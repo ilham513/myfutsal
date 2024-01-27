@@ -10,44 +10,23 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="<?=site_url('admin/add_absen')?>">
+        <a class="nav-link collapsed" href="<?=site_url('admin/view_jadwal')?>">
           <i class="bi bi-plus-circle"></i>
-          <span>Buat Kode Absen</span>
+          <span>Jadwal</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="<?=site_url('admin/view_absen')?>">
+        <a class="nav-link collapsed" href="<?=site_url('admin/view_penyewa')?>">
           <i class="bi bi-journal-text"></i>
-          <span>Data Absen</span>
+          <span>Penyewa</span>
         </a>
       </li><!-- End Profile Page Nav -->
 	  
       <li class="nav-item">
-        <a class="nav-link collapsed" href="<?=site_url('admin/view_pelajaran')?>">
+        <a class="nav-link collapsed" href="<?=site_url('admin/view_waktu_sewa')?>">
           <i class="bi bi-book"></i>
-          <span>Pelajaran</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?=site_url('admin/view_siswa')?>">
-          <i class="bi bi-person"></i>
-          <span>Siswa</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?=site_url('admin/view_kelas')?>">
-          <i class="bi bi-building"></i>
-          <span>Kelas</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?=site_url('admin/view_pencarian')?>">
-          <i class="bi bi-search"></i>
-          <span>Pencarian</span>
+          <span>Waktu Sewa</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
