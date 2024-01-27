@@ -12,9 +12,10 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$data['jumlah_penyewa'] = $this->crud_model->menghitung_jumlah_row('penyewa');
 		// var_dump($data);die();
 		
-		$this->load->view('admin_index', $data='');
+		$this->load->view('admin_index', $data);
 	}	
 
 	public function view_jadwal()

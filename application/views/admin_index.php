@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							  <i class="bi bi-person"></i>
 							</div>
 							<div class="ps-3">
-							  <h6>50</h6>
+							  <h6><?= $jumlah_penyewa; ?></h6>
 							  <span class="text-muted small pt-2 ps-1">Tim yang akan menyewa</span>
 							</div>
 						  </div>

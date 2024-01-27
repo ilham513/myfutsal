@@ -38,79 +38,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </tr>
               </thead>
               <tbody>
-                                <tr>
+			  <?php foreach($array_jadwal as $jadwal): ?>
+				<tr>
                   <td width="150">
-                    Susis PBSI                  </td>
+					<?=$jadwal->nama_penyewa;?>                  </td>
                   <td width="150">
-                    Selasa, 11:00 - 13:30                  </td>
+                    <?=$jadwal->waktu_sewa;?>                  </td>
                 </tr>
-                                <tr>
-                  <td width="150">
-                    Bina R.                  </td>
-                  <td width="150">
-                    Senin, 14:00 - 16:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    Pesona                  </td>
-                  <td width="150">
-                    Kamis, 08:00 - 10:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    Madank                  </td>
-                  <td width="150">
-                    Senin, 11:00 - 13:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    Vortuna                  </td>
-                  <td width="150">
-                    Senin, 19:00 - 21:30                   </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    Bina R. Mom                  </td>
-                  <td width="150">
-                    Sabtu, 08:00 - 10:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    Jono PBSI                  </td>
-                  <td width="150">
-                    Rabu, 11:00 - 13:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    Udin PBSI                  </td>
-                  <td width="150">
-                    Kamis, 11:00 - 13:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    Bima                  </td>
-                  <td width="150">
-                    Selasa, 08:00 - 10:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    MEDI                  </td>
-                  <td width="150">
-                    Jumat, 08:00 - 10:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    M.U                  </td>
-                  <td width="150">
-                    Rabu, 08:00 - 10:30                  </td>
-                </tr>
-                                <tr>
-                  <td width="150">
-                    RW                  </td>
-                  <td width="150">
-                    Senin, 08:00 - 12:30                  </td>
-                </tr>
-                              </tbody>
+				<?php endforeach; ?>
+			  </tbody>
             </table>
 		</div>
 
